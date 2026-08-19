@@ -120,9 +120,9 @@ public class AuctionsController : ControllerBase
 
         var result = await _context.SaveChangesAsync() > 0;
 
-        return BadRequest("Could not update DB");
-
         if (result) return Ok();
+
+        return BadRequest("Could not update DB");
 
     }
 
